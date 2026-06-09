@@ -1,20 +1,197 @@
 [
   {
+    "type": "console.navigation/section",
+    "properties": {
+      "id": "certificates",
+      "perspective": "admin",
+      "name": "%plugin__console-plugin-cert-manager~Certificates%"
+    }
+  },
+  {
     "type": "console.page/route",
     "properties": {
       "exact": true,
-      "path": "/example",
-      "component": { "$codeRef": "ExamplePage" }
+      "path": "/certificates",
+      "component": { "$codeRef": "CertificateListPage" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/certificates/:ns/:name",
+      "component": { "$codeRef": "CertificateDetailsPage" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/certificates/create",
+      "component": { "$codeRef": "CertificateForm" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/certificates/:ns/:name/edit",
+      "component": { "$codeRef": "CertificateForm" }
     }
   },
   {
     "type": "console.navigation/href",
     "properties": {
-      "id": "example",
-      "name": "%plugin__console-plugin-template~Plugin example%",
-      "href": "/example",
+      "id": "certificates-nav",
       "perspective": "admin",
-      "section": "home"
+      "section": "certificates",
+      "name": "%plugin__console-plugin-cert-manager~Certificates%",
+      "href": "/certificates"
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/issuers",
+      "component": { "$codeRef": "IssuerListPage" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/issuers/:ns/:name",
+      "component": { "$codeRef": "IssuerDetailsPage" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/issuers/create",
+      "component": { "$codeRef": "IssuerForm" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/issuers/:ns/:name/edit",
+      "component": { "$codeRef": "IssuerForm" }
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "issuers-nav",
+      "perspective": "admin",
+      "section": "certificates",
+      "name": "%plugin__console-plugin-cert-manager~Issuers%",
+      "href": "/issuers"
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/clusterissuers",
+      "component": { "$codeRef": "ClusterIssuerListPage" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/clusterissuers/:name",
+      "component": { "$codeRef": "ClusterIssuerDetailsPage" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/clusterissuers/create",
+      "component": { "$codeRef": "ClusterIssuerForm" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/clusterissuers/:name/edit",
+      "component": { "$codeRef": "ClusterIssuerForm" }
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "clusterissuers-nav",
+      "perspective": "admin",
+      "section": "certificates",
+      "name": "%plugin__console-plugin-cert-manager~ClusterIssuers%",
+      "href": "/clusterissuers"
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/certificaterequests",
+      "component": { "$codeRef": "CertificateRequestListPage" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/certificaterequests/:ns/:name",
+      "component": { "$codeRef": "CertificateRequestDetailsPage" }
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "certificaterequests-nav",
+      "perspective": "admin",
+      "section": "certificates",
+      "name": "%plugin__console-plugin-cert-manager~CertificateRequests%",
+      "href": "/certificaterequests"
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/certmanager/:name",
+      "component": { "$codeRef": "CertManagerDetailsPage" }
+    }
+  },
+  {
+    "type": "console.page/route",
+    "properties": {
+      "exact": true,
+      "path": "/certmanager/:name/edit",
+      "component": { "$codeRef": "CertManagerForm" }
+    }
+  },
+  {
+    "type": "console.navigation/href",
+    "properties": {
+      "id": "certmanager-nav",
+      "perspective": "admin",
+      "section": "certificates",
+      "name": "%plugin__console-plugin-cert-manager~CertManager Config%",
+      "href": "/certmanager/cluster"
+    }
+  },
+  {
+    "type": "console.dashboards/card",
+    "properties": {
+      "tab": "overview",
+      "position": "right",
+      "span": 6,
+      "component": { "$codeRef": "CertificateDashboardCard" }
     }
   }
 ]
