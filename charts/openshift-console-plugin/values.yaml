@@ -2,7 +2,7 @@
 plugin:
   name: "console-plugin-cert-manager"
   description: "Certificate management for OpenShift using cert-manager operator"
-  image: "quay.io/anandkuma77/console-plugin-cert-manager:latest"
+  image: "quay.io/anankuma/console-plugin-cert-manager:latest"
   imagePullPolicy: IfNotPresent
   imagePullSecrets: []
   replicas: 2
