@@ -9,7 +9,7 @@ import {
   SearchInput,
   Label,
   EmptyState,
-  EmptyStateHeader,
+  Title,
 } from '@patternfly/react-core';
 import {
   Table,
@@ -109,7 +109,7 @@ export const CertificateRequestListPage: React.FC = () => {
     return (
       <PageSection>
         <EmptyState>
-          <EmptyStateHeader titleText={t('Error loading certificate requests')} headingLevel="h2" />
+          <Title headingLevel="h2">{t('Error loading certificate requests')}</Title>
         </EmptyState>
       </PageSection>
     );
@@ -138,7 +138,7 @@ export const CertificateRequestListPage: React.FC = () => {
 
         {loaded && filteredCertRequests.length === 0 ? (
           <EmptyState>
-            <EmptyStateHeader titleText={t('No certificate requests found')} headingLevel="h2" />
+            <Title headingLevel="h2">{t('No certificate requests found')}</Title>
           </EmptyState>
         ) : (
           <Table>

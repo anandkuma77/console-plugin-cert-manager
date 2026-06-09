@@ -11,7 +11,7 @@ import {
   Button,
   Label,
   EmptyState,
-  EmptyStateHeader,
+  Title,
   EmptyStateFooter,
   EmptyStateActions,
 } from '@patternfly/react-core';
@@ -102,7 +102,7 @@ export const IssuerListPage: React.FC = () => {
     return (
       <PageSection>
         <EmptyState>
-          <EmptyStateHeader titleText={t('Error loading issuers')} headingLevel="h2" />
+          <Title headingLevel="h2">{t('Error loading issuers')}</Title>
         </EmptyState>
       </PageSection>
     );
@@ -136,7 +136,7 @@ export const IssuerListPage: React.FC = () => {
 
         {loaded && filteredIssuers.length === 0 ? (
           <EmptyState>
-            <EmptyStateHeader titleText={t('No issuers found')} headingLevel="h2" />
+            <Title headingLevel="h2">{t('No issuers found')}</Title>
             <EmptyStateFooter>
               <EmptyStateActions>
                 <Button variant="primary" onClick={() => (window.location.href = '/issuers/create')}>

@@ -5463,9 +5463,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"console-plugin-template@workspace:.":
+"console-plugin-cert-manager@workspace:.":
   version: 0.0.0-use.local
-  resolution: "console-plugin-template@workspace:."
+  resolution: "console-plugin-cert-manager@workspace:."
   dependencies:
     "@babel/core": "npm:^7.29.0"
     "@babel/preset-env": "npm:^7.29.3"
@@ -5512,6 +5512,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     react-i18next: "npm:~16.5.8"
     react-router: "npm:~7.13.1"
+    react-router-dom: "npm:^7.17.0"
     style-loader: "npm:^4.0.0"
     stylelint: "npm:^17.9.1"
     stylelint-config-standard: "npm:^40.0.0"
@@ -12017,6 +12018,34 @@ __metadata:
   version: 18.3.1
   resolution: "react-is@npm:18.3.1"
   checksum: 10c0/f2f1e60010c683479e74c63f96b09fb41603527cd131a9959e2aee1e5a8b0caf270b365e5ca77d4a6b18aae659b60a86150bb3979073528877029b35aecd2072
+  languageName: node
+  linkType: hard
+
+"react-router-dom@npm:^7.17.0":
+  version: 7.17.0
+  resolution: "react-router-dom@npm:7.17.0"
+  dependencies:
+    react-router: "npm:7.17.0"
+  peerDependencies:
+    react: ">=18"
+    react-dom: ">=18"
+  checksum: 10c0/60fc4022bccf2fb17b0d8ae8e7c4bda866ca9bf2d45edf0bcbefc854e97fa8971a589b6b77b984a19abecb718faffde357c829d9a22a7913790d608cc7433714
+  languageName: node
+  linkType: hard
+
+"react-router@npm:7.17.0":
+  version: 7.17.0
+  resolution: "react-router@npm:7.17.0"
+  dependencies:
+    cookie: "npm:^1.0.1"
+    set-cookie-parser: "npm:^2.6.0"
+  peerDependencies:
+    react: ">=18"
+    react-dom: ">=18"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+  checksum: 10c0/dfa9b0182edba6fab14ef5ac297b292068e71e05bf7e07c6b45fe073d77002089e8e164542364232a8bbb0c7d3ec47b57b78db3984c4383e12308f2d31ad404a
   languageName: node
   linkType: hard
 

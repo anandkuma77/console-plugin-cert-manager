@@ -11,7 +11,7 @@ import {
   Button,
   Label,
   EmptyState,
-  EmptyStateHeader,
+  Title,
   EmptyStateFooter,
   EmptyStateActions,
 } from '@patternfly/react-core';
@@ -95,7 +95,7 @@ export const ClusterIssuerListPage: React.FC = () => {
     return (
       <PageSection>
         <EmptyState>
-          <EmptyStateHeader titleText={t('Error loading cluster issuers')} headingLevel="h2" />
+          <Title headingLevel="h2">{t('Error loading cluster issuers')}</Title>
         </EmptyState>
       </PageSection>
     );
@@ -129,7 +129,7 @@ export const ClusterIssuerListPage: React.FC = () => {
 
         {loaded && filteredClusterIssuers.length === 0 ? (
           <EmptyState>
-            <EmptyStateHeader titleText={t('No cluster issuers found')} headingLevel="h2" />
+            <Title headingLevel="h2">{t('No cluster issuers found')}</Title>
             <EmptyStateFooter>
               <EmptyStateActions>
                 <Button variant="primary" onClick={() => (window.location.href = '/clusterissuers/create')}>

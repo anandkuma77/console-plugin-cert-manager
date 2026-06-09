@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import {
-  Page,
   PageSection,
   Content,
   Toolbar,
@@ -11,9 +10,9 @@ import {
   Button,
   Label,
   EmptyState,
-  EmptyStateHeader,
   EmptyStateFooter,
   EmptyStateActions,
+  Title,
 } from '@patternfly/react-core';
 import {
   Table,
@@ -97,7 +96,7 @@ export const CertificateListPage: React.FC = () => {
     return (
       <PageSection>
         <EmptyState>
-          <EmptyStateHeader titleText={t('Error loading certificates')} headingLevel="h2" />
+          <Title headingLevel="h2">{t('Error loading certificates')}</Title>
         </EmptyState>
       </PageSection>
     );
@@ -131,7 +130,7 @@ export const CertificateListPage: React.FC = () => {
 
         {loaded && filteredCerts.length === 0 ? (
           <EmptyState>
-            <EmptyStateHeader titleText={t('No certificates found')} headingLevel="h2" />
+            <Title headingLevel="h2">{t('No certificates found')}</Title>
             <EmptyStateFooter>
               <EmptyStateActions>
                 <Button variant="primary" onClick={() => (window.location.href = '/certificates/create')}>

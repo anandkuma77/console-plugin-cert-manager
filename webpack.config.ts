@@ -69,11 +69,11 @@ const config: Configuration = {
   },
   plugins: [
     new ConsoleRemotePlugin(),
-    new ForkTsCheckerWebpackPlugin({
+    ...(isProd ? [] : [new ForkTsCheckerWebpackPlugin({
       typescript: {
         configFile: path.resolve(__dirname, 'tsconfig.json'),
       },
-    }),
+    })]),
     new CopyWebpackPlugin({
       patterns: [{ from: path.resolve(__dirname, 'locales'), to: 'locales' }],
     }),

@@ -9,7 +9,7 @@ import {
   FlexItem,
 } from '@patternfly/react-core';
 import { useK8sWatchResource } from '@openshift-console/dynamic-plugin-sdk';
-import { Certificate, CertificateModel } from '../../models/Certificate';
+import { Certificate, CertificateModel } from '../../types/Certificate';
 
 const CertificateDashboardCard: React.FC = () => {
   const { t } = useTranslation('plugin__console-plugin-cert-manager');
